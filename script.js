@@ -44,12 +44,18 @@ function addListAfterKeypress(event) {
 //if it was the button it will wipeoue the ourHTML wich in this case is the parent Li of the button
 function DeleteLiByButton (data){
 	//console.log(data.originalTarget.localName) - This ws
-	console.log(data)
-	
-	if (data.originalTarget.localName ===`button`){
+	console.log(data.path[0].className)
+
+	if (data.path[0].className ===`button1`){
 		return this.outerHTML = "" 	
 	} 
-		
+
+	
+/*	this version works on local machine
+if (data.originalTarget.localName ===`button`){
+		return this.outerHTML = "" 	
+	} 
+*/		
 }
 // 14 function to call event listener on buttons that gets clicked. and deleteLiByButton as well
 function liButtonListener (data){

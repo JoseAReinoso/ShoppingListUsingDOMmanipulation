@@ -43,13 +43,7 @@ function addListAfterKeypress(event) {
 //15 function that checks if there what was click was the button or li,
 //if it was the button it will wipeoue the ourHTML wich in this case is the parent Li of the button
 function DeleteLiByButton (data){
-	//console.log(data.originalTarget.localName) - This ws
-	console.log(data.path[0].className)
-
-	if (data.path[0].className ===`button1`){
-		return this.outerHTML = "" 	
-	} 
-
+console.log(data)
 	
 /*	this version works on local machine
 if (data.originalTarget.localName ===`button`){

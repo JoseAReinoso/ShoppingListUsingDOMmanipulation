@@ -42,8 +42,10 @@ function addListAfterKeypress(event) {
 }
 //15 function that checks if there what was click was the button or li,
 //if it was the button it will wipeoue the ourHTML wich in this case is the parent Li of the button
-function deleteLiByButton (data){
+function DeleteLiByButton (data){
 	//console.log(data.originalTarget.localName) - This ws
+	console.log(data)
+	
 	if (data.originalTarget.localName ===`button`){
 		return this.outerHTML = "" 	
 	} 
@@ -51,7 +53,7 @@ function deleteLiByButton (data){
 }
 // 14 function to call event listener on buttons that gets clicked. and deleteLiByButton as well
 function liButtonListener (data){
-	data.addEventListener("click",deleteLiByButton )
+	data.addEventListener("click",DeleteLiByButton)
 }
 //13 function to create button, add classlist for css, text, and appends it to the li clicked
 //which in this case it got passed on the data, it calls liButtonListener function as well
